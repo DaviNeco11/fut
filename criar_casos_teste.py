@@ -14,12 +14,12 @@ def criar_caso_teste(base_dir, nome_caso, input_data, expected_data):
     print(f"\n✅ Caso de teste '{nome_caso}' criado com sucesso em '{caso_path}'.")
 
 def main():
-    print("📄 Criador de Casos de Teste FHIR")
+    print(" Criador de Casos de Teste FHIR")
 
     base = input("Digite o caminho da pasta base (ex: tests/suite1): ").strip()
     nome = input("Nome do caso de teste (ex: test_case_05): ").strip()
 
-    print("\n🔧 Criando input.json")
+    print("\n Criando input.json")
     resource_type = input("resourceType (ex: Patient): ").strip()
     patient_id = input("id do paciente: ").strip()
     family_name = input("Sobrenome: ").strip()
