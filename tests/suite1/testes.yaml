@@ -1,0 +1,20 @@
+casos:
+  - nome: paciente_valido
+    entrada: "tests/suite1/paciente_valido.json"
+    esperado: "tests/suite1/paciente_valido_esperado.json"
+    esperaErros: false
+
+  - nome: paciente_sem_cpf
+    entrada: "tests/suite1/paciente_sem_cpf.json"
+    esperado: "tests/suite1/paciente_sem_cpf_esperado.json"
+    esperaErros: true
+
+  - nome: test1
+    entrada: "tests/suite1/test1.json"
+    esperado: "tests/suite1/test1_esperado.json"
+    esperaErros: false
+
+  - nome: test2
+    entrada: "tests/suite1/test2.json"
+    esperado: "tests/suite1/test2_esperado.json"
+    esperaErros: false

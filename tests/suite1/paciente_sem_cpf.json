@@ -1,0 +1,34 @@
+{
+    "resourceType": "Patient",
+    "id": "paciente-sem-cpf",
+    "meta": {
+      "profile": [
+        "https://rnds-fhir.saude.gov.br/StructureDefinition/BRIndividuo-1.0"
+      ]
+    },
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">JOÃO DA SILVA</div>"
+    },
+    "name": [
+      {
+        "use": "official",
+        "family": "SILVA",
+        "given": ["JOÃO"]
+      }
+    ],
+    "gender": "male",
+    "birthDate": "1980-01-01",
+    "address": [
+      {
+        "use": "home",
+        "type": "both",
+        "line": ["Rua Exemplo, 123"],
+        "city": "São Paulo",
+        "state": "SP",
+        "postalCode": "01000-000",
+        "country": "BR"
+      }
+    ]
+  }
+  
