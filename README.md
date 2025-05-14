@@ -1,44 +1,94 @@
-# FHIRUT - Conjunto de Testes Unitários FHIR
 
-**FHIRUT**  é uma ferramenta desenvolvida para automatizar testes de validação de recursos FHIR, com o objetivo de simplificar e agilizar o processo de verificação de conformidade com o padrão HL7 FHIR.
+# FHIRUT - Testes Automatizados para Recursos FHIR
 
-## 💡 Objetivo
+**FHIRUT** (FHIR Unit Tester) é uma ferramenta desenvolvida para facilitar a criação, execução e verificação automatizada de testes de conformidade para recursos FHIR, utilizando o validador oficial `validator_cli.jar`.
 
-Automatizar a execução do validador FHIR oficial (`validator_cli.jar`) para múltiplos recursos FHIR, comparando os resultados com as expectativas definidas pelo usuário.
+---
 
-## 🧩 Componentes
+## 🎯 Objetivo
 
-- **Casos de Teste**: cada caso define um recurso FHIR a ser validado (`input.json`) e o resultado esperado (`expected.json`).
-- **Conjuntos de Testes (Suites)**: agrupamentos de casos relacionados.
-- **Test Runner**: executa os testes usando o `validator_cli.jar`.
-- **Comparador de Resultados**: verifica se o resultado gerado está de acordo com o esperado.
-- **Gerador de Relatórios**: gera relatórios claros e organizados com os resultados de todos os testes executados.
-- **Interface Gráfica (opcional)**: permite que o usuário interaja com a ferramenta de forma visual.
+Automatizar o processo de verificação de conformidade de instâncias FHIR, com geração e execução de casos de teste, validação automatizada com o validador HL7 e comparação dos resultados esperados com os obtidos.
 
-## ▶️ Exemplo de uso do validador
+---
 
-## 🚧 Estrutura de Diretórios
+## 📂 Estrutura do Projeto
 
+```
 fhirut/
-├── tests/                  # Casos e conjuntos de testes
-│   └── suite1/
-│       ├── test1.json
-│       ├── test1_expected.json
-├── core/                   # Código principal da ferramenta
-│   ├── test_case.py
-│   ├── test_runner.py
-│   ├── result_comparator.py
-│   ├── report_generator.py
-│   └── config.py
-├── gui/                    # Interface gráfica
-├── main.py                 # Ponto de entrada principal
-└── README.md               # Este arquivo
-🔧 Requisitos
-Python 3.7+
+├── main.py                         # Executa um teste específico
+├── criar_casos_teste.py           # Gera novos casos de teste interativamente
+├── validator_cli.jar              # (não incluído) precisa ser baixado manualmente
+├── core/
+│   ├── test_case.py               # Representa um caso de teste
+│   ├── test_runner.py             # Roda o validador CLI
+│   ├── result_comparator.py       # Compara resultado com o esperado
+│   └── report_generator.py        # (Em desenvolvimento) Gera relatório de testes
+└── tests/
+    └── suite1/
+        ├── test1.json             # Recurso FHIR de entrada
+        └── test1_expected.json    # Resultado esperado
+```
 
-Java 8 ou superior
+---
 
-validator_cli.jar 
+## ⚙️ Pré-requisitos
 
-📌 Status
-🚧 Em desenvolvimento para a disciplina de Construção de Software.
+- Python 3.7+
+- Java instalado
+- [validator_cli.jar](https://github.com/hapifhir/org.hl7.fhir.core/releases) (precisa ser baixado manualmente)
+
+---
+
+## 🚀 Como usar
+
+### 1. Criar um novo caso de teste
+
+```bash
+python criar_casos_teste.py
+```
+
+### 2. Executar um teste
+
+```bash
+python main.py
+```
+
+- Se o `expected.json` ainda não existir, ele será criado automaticamente com base no resultado da validação.
+- Na segunda execução, o resultado será comparado com o esperado.
+
+---
+
+## 🧪 Resultado esperado no terminal
+
+```bash
+🚀 Executando o teste: test1
+✅ Resultado salvo em: outputs/test1_result.json
+
+📊 Resultado da comparação: ✅ TESTE APROVADO
+ - Validação bem-sucedida e compatível com o esperado.
+```
+
+---
+
+## 📥 Sobre o validator_cli.jar
+
+Este projeto utiliza o [`validator_cli.jar`](https://github.com/hapifhir/org.hl7.fhir.core/releases) oficial da HL7 FHIR.  
+Devido ao limite de tamanho do GitHub, o arquivo **não está incluso no repositório**.
+
+Faça o download manual e coloque na raiz do projeto.
+
+---
+
+## 📌 Em desenvolvimento
+
+- [ ] Execução automática de múltiplos testes
+- [ ] Geração de relatórios completos
+- [ ] Interface gráfica com Streamlit ou Tkinter
+- [ ] Integração com CI/CD
+
+---
+
+## 👥 Contribuidores
+
+- [@DaviNeco11](https://github.com/DaviNeco11)
+- Equipe de desenvolvimento do projeto `fut`
