@@ -91,4 +91,5 @@ Faça o download manual e coloque na raiz do projeto.
 ## 👥 Contribuidores
 
 - [@DaviNeco11](https://github.com/DaviNeco11)
+- [@MathPaccheco](https://github.com/MathPaccheco)
 - Equipe de desenvolvimento do projeto `fut`
