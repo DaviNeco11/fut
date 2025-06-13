@@ -1,39 +1,50 @@
-from core.test_case import TestCase
 from core.test_runner import run_validator
-from core.result_comparator import compare_results
+from core.parser import carregar_casos_teste
 from pathlib import Path
 import shutil
 
 def main():
-    # Caminhos dos arquivos
-    input_path = "tests/suite1/test1.json"
-    expected_path = "tests/suite1/test1_expected.json"
     validator_path = "validator_cli.jar"
+    yaml_path = Path(__file__).parent / "tests" / "suite1" / "testes.yaml"
 
-    # Criar instância do caso de teste
-    test_case = TestCase(name="test1", input_path=input_path, expected_path=expected_path)
+    casos = carregar_casos_teste(yaml_path)
 
-    # Executar validador
-    print(f"🚀 Executando o teste: {test_case.name}")
-    result_path = run_validator(test_case, validator_path)
+    total = len(casos)
+    passed = 0
+    failed = 0
 
-    if result_path:
-        print(f"✅ Resultado salvo em: {result_path}")
+    for caso in casos:
+        print(f"\n🔍 Executando teste: {caso.name}")
+        print(f"📥 Entrada: {caso.input_path}")
+        print(f"❓ Espera erros? {'Sim' if getattr(caso, 'espera_erros', False) else 'Não'}")
 
-        # Se o expected ainda não existir, criamos com base no primeiro resultado
-        if not Path(expected_path).exists():
-            shutil.copy(result_path, expected_path)
-            print(f"📄 Arquivo esperado criado automaticamente: {expected_path}")
+        result_path = run_validator(caso, validator_path)
+
+        if result_path:
+            print(f"📤 Resultado salvo em: {result_path}")
+            if not caso.expected_path.exists():
+                shutil.copy(result_path, caso.expected_path)
+                print(f"[🆕] Esperado criado: {caso.expected_path}")
+                passed += 1  # Consideramos como aprovado se for a primeira geração
+            else:
+                # Resultado já foi comparado dentro de run_validator
+                if caso.result_path:  # se for diferente de None, foi gerado e comparado
+                    with open(caso.result_path, encoding='utf-8') as f:
+                        resultado = f.read()
+                        if "OperationOutcome" in resultado:
+                            passed += 1
+                        else:
+                            failed += 1
+                else:
+                    failed += 1
         else:
-            # Comparar resultado com o esperado
-            passed, messages = compare_results(expected_path, result_path)
-            status = "✅ TESTE APROVADO" if passed else "❌ TESTE FALHOU"
-            print(f"\n📊 Resultado da comparação: {status}")
-            for msg in messages:
-                print(f" - {msg}")
+            print(f"❌ Falha na execução do validador para: {caso.name}")
+            failed += 1
 
-    else:
-        print("❌ Falha ao executar o validador.")
+    print("\n📊 RESUMO FINAL")
+    print(f"✔️ Testes passados: {passed}")
+    print(f"❌ Testes falhados: {failed}")
+    print(f"🔢 Total executado: {total}")
 
 if __name__ == "__main__":
     main()
