@@ -17,31 +17,20 @@ def normalize_issue(issue):
         "expression": issue.get("expression")
     }
 
-def compare_issues(expected_issues, actual_issues):
+def compare_results(expected_data, actual_data):
     """
-    Compara listas de issues esperadas e atuais.
+    Retorna differences para relatório detalhado.
     """
+    expected_issues = expected_data.get("issue", []) if expected_data else []
+    actual_issues = actual_data.get("issue", []) if actual_data else []
+
     normalized_expected = [normalize_issue(issue) for issue in expected_issues]
     normalized_actual = [normalize_issue(issue) for issue in actual_issues]
 
-    return normalized_expected == normalized_actual
+    differences = []
+    if normalized_expected != normalized_actual:
+        differences.append("Issues diferentes entre esperado e obtido.")
+        differences.append("Esperado: " + json.dumps(normalized_expected, ensure_ascii=False, indent=2))
+        differences.append("Obtido: " + json.dumps(normalized_actual, ensure_ascii=False, indent=2))
 
-def compare_results(test_case):
-    if test_case.result_path is None:
-        print(f"Nenhum resultado encontrado para o teste {test_case.name}.")
-        return False
-
-    expected_data = test_case.load_expected()
-    actual_data = load_json(test_case.result_path)
-
-    expected_issues = expected_data.get("issue", [])
-    actual_issues = actual_data.get("issue", [])
-
-    is_equal = compare_issues(expected_issues, actual_issues)
-
-    if not is_equal:
-        print(f"Diferenças encontradas no teste {test_case.name}:")
-        print("Esperado:", json.dumps(expected_issues, indent=2, ensure_ascii=False))
-        print("Obtido:", json.dumps(actual_issues, indent=2, ensure_ascii=False))
-
-    return is_equal
+    return differences
