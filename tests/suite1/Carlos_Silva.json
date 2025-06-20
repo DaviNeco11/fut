@@ -1,0 +1,82 @@
+{
+  "resourceType": "Patient",
+  "id": "example2",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Paciente exemplo com todos os campos recomendados.</div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "SB",
+            "display": "Social Beneficiary Identifier"
+          }
+        ],
+        "text": "CPF"
+      },
+      "system": "http://gov.br/cpf",
+      "value": "12345678900"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Silva",
+      "given": ["Carlos"]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+55-62-99999-9999",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "joao.silva@example.com",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1990-05-10",
+  "address": [
+    {
+      "use": "home",
+      "type": "both",
+      "line": ["Rua das Acácias, 123"],
+      "city": "Inhumas",
+      "state": "GO",
+      "postalCode": "75400-000",
+      "country": "BR"
+    }
+  ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "code": "S",
+        "display": "Single"
+      }
+    ]
+  },
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "pt-BR",
+            "display": "Portuguese (Brazil)"
+          }
+        ],
+        "text": "Português (Brasil)"
+      },
+      "preferred": true
+    }
+  ]
+}
