@@ -21,7 +21,9 @@ fhirut/
 ├── core/
 │   ├── test_case.py               # Representa um caso de teste
 │   ├── test_runner.py             # Roda o validador CLI
+│   ├── parser.py                  # Lógica para arquivos YAML
 │   ├── result_comparator.py       # Compara resultado com o esperado
+│   ├── report_display_streamlit.py# Implementação da interface gráfica web
 │   └── report_generator.py        # (Em desenvolvimento) Gera relatório de testes
 └── tests/
     └── suite1/
@@ -36,25 +38,27 @@ fhirut/
 - Python 3.7+
 - Java instalado
 - [validator_cli.jar](https://github.com/hapifhir/org.hl7.fhir.core/releases) (precisa ser baixado manualmente)
-
+- YAML instalado (pip install yaml)
+- STREAMLIT instalado (pip instal streamlit)
+  
 ---
 
 ## 🚀 Como usar
 
-### 1. Criar um novo caso de teste
+### 1. Criar e adicionar um novo caso de teste ao tests/suite1/testes.yaml
 
 ```bash
 python criar_casos_teste.py
 ```
 
-### 2. Executar um teste
+### 2. Executar todos os testes
 
 ```bash
 python main.py
 ```
 
 - Se o `expected.json` ainda não existir, ele será criado automaticamente com base no resultado da validação.
-- Na segunda execução, o resultado será comparado com o esperado.
+- Se o resultado já existir em outras execuções, um novo não é criado.
 
 ---
 
@@ -68,6 +72,20 @@ python main.py
  - Validação bem-sucedida e compatível com o esperado.
 ```
 
+## Interface gráfica STREAMLIT inicia no navegador localmente
+
+```
+Visualização dos sesguintes elementos:
+- Total de Testes;
+- Quantidade de testes que falharam;
+- Quantidade de testes que passaram;
+- Total do tempo de execução;
+- Resultados Obtidos de cada teste;
+- Status de cada teste;
+- Tempo de execução de cada teste;
+- Mensagens de erro de cada teste;
+
+```
 ---
 
 ## 📥 Sobre o validator_cli.jar
@@ -79,12 +97,11 @@ Faça o download manual e coloque na raiz do projeto.
 
 ---
 
-## 📌 Em desenvolvimento
+## 📌 Foi desenvolvido
 
-- [ ] Execução automática de múltiplos testes
-- [ ] Geração de relatórios completos
-- [ ] Interface gráfica com Streamlit ou Tkinter
-- [ ] Integração com CI/CD
+- [X] Execução automática de múltiplos testes
+- [X] Geração de relatórios completos
+- [X] Interface gráfica com Streamlit
 
 ---
 
