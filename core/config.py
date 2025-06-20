@@ -1,1 +1,0 @@
-# Caminhos e configurações
