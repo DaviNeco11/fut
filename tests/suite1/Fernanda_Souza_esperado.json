@@ -1,0 +1,18 @@
+{
+  "resourceType" : "OperationOutcome",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td></tr><tr><td>information</td><td/><td>informational</td><td>All OK</td><td/></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+    "valueString" : "tests\\suite1\\Fernanda_Souza.json"
+  }],
+  "issue" : [{
+    "severity" : "information",
+    "code" : "informational",
+    "details" : {
+      "text" : "All OK"
+    }
+  }]
+}

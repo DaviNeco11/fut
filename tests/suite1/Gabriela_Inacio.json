@@ -1,48 +1,27 @@
 {
   "resourceType": "Patient",
-  "id": "paciente-valido",
-  "meta": {
-    "profile": [
-      "https://rnds-fhir.saude.gov.br/StructureDefinition/BRIndividuo-1.0"
-    ]
-  },
+  "id": "gabriela-inacio",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">GABRIELA INACIO ALVES</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Paciente: Gabriela Inacio</div>"
   },
-  "identifier": [
-    {
-      "use": "official",
-      "type": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code": "BRCPF"
-          }
-        ]
-      },
-      "system": "http://cpf.brasil.gov.br",
-      "value": "12345678900"
-    }
-  ],
-  "name": [
-    {
-      "use": "official",
-      "family": "ALVES",
-      "given": ["GABRIELA", "INACIO"]
-    }
-  ],
+  "identifier": [{
+    "use": "official",
+    "system": "http://gov.br/cpf",
+    "value": "34567890123"
+  }],
+  "name": [{
+    "use": "official",
+    "family": "Inacio",
+    "given": ["Gabriela"]
+  }],
   "gender": "female",
-  "birthDate": "1976-09-15",
-  "address": [
-    {
-      "use": "home",
-      "type": "both",
-      "line": ["081 SQN BLOCO M 604 APARTAMENTO"],
-      "city": "BRASILIA",
-      "state": "DF",
-      "postalCode": "70752130",
-      "country": "BR"
-    }
-  ]
+  "birthDate": "1993-02-14",
+  "maritalStatus": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code": "D",
+      "display": "Divorced"
+    }]
+  }
 }

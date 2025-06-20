@@ -1,0 +1,59 @@
+{
+  "resourceType" : "OperationOutcome",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>information</td><td>Patient.meta.profile[0]</td><td>invalid</td><td>Canonical URL 'https://rnds-fhir.saude.gov.br/StructureDefinition/BRIndividuo-1.0' does not resolve</td><td/><td>InstanceValidator</td></tr><tr><td>warning</td><td>Patient.meta.profile[0]</td><td>structure</td><td>Profile reference 'https://rnds-fhir.saude.gov.br/StructureDefinition/BRIndividuo-1.0' has not been checked because it could not be found, and fetching it resulted in the error org.hl7.fhir.r4.utils.client.EFhirClientException: Error from https://rnds-fhir.saude.gov.br: RNDS\\Principal - FHIR v4.0.1 h2{--heading-prefix:&quot;1&quot;} h3,h4,h5,h6{--heading-prefix:&quot;1&quot;} Guia de Implementação da RNDS 1.0.0 - CI Build 076 FHIR * Principal * Credenciamento * Segurança * Integração * Especificação * Artefatos Exemplos * Exemplos * Resultado de Exame Laboratorial (V2) Resultado de Exame Laboratorial (V3.2.1) * Ajuda * Índice * FHIR Spec [image] * Histórico de mudanças * Downloads * Índice * Principal &lt;prev | bottom | next&gt; h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) &quot; &quot;;} h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) &quot;.&quot; counter(sub-section) &quot; &quot;;} h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) &quot;.&quot; counter(sub-section) &quot;.&quot; counter(composite) &quot; &quot;;} h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) &quot;.&quot; counter(sub-section) &quot;.&quot; counter(composite) &quot;.&quot; counter(detail) &quot; &quot;;} h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) &quot;.&quot; counter(sub-section) &quot;.&quot; counter(composite) &quot;.&quot; counter(detail) &quot;.&quot; counter(more-detail)&quot; &quot;;} Guia de Implementação da RNDS - Local Development build (v1.0.0). See the Directory of published versions Principal URL oficial: https://rnds-fhir.saude.gov.br/ImplementationGuide/rnds Version: 1.0.0 IG Status do padrão: Informative Nível de maturidade do FHIR (FMM): 1 Nome computável: rnds-fhir.saude.gov.br Página de status do padrão: Informative Contents: * Introdução * Público-alvo * Roteiro Introdução Este portal detalha o uso do padrão FHIR para interoperabilidade entre Sistemas de Informação em Saúde (SISs) e a Rede Nacional de Dados em Saúde (RNDS). Público-alvo O conteúdo deste portal é dirigido a profissionais que produzem software, doravante, integradores, bem como profissionais de saúde. Os primeiros têm como foco satisfazer o &quot;contrato&quot; aqui estabelecido para que um SIS possa interagir de forma satisfatória com a RNDS. Os profissionais de saúde estão interessados em consultar detalhes semânticos que permitam compreender exatamente o conteúdo do que é trocado com a RNDS. Roteiro * ​ Credenciamento junto ao DATASUS - Saiba qual é o processo a ser seguido por um estabelecimento de saúde, e requisitos, para a integração com a RNDS. * ​ Espcificação detalhada - Define as operações e os recursos ( resources ) a serem atendidos para integração com a RNDS. * Downloads - Artefatos empregados por integradores. $(document).ready(function(){ if(window.location.hash != &quot;&quot;) { $('a[href=&quot;' + window.location.hash + '&quot;]').click() } }); \u00a0 &lt;prev top \u00a0 next&gt; IG © 2022+ Ministério da Saúde do Brasil. Package rnds#1.0.0 based on FHIR 4.0.1. Generated 2022-12-14 Links: Índice | Relatório de Qualidade anchors.options.visible = 'hover' anchors.add()</td><td/><td>InstanceValidator</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+    "valueString" : "tests\\suite1\\Joao_Silva.json"
+  }],
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger" : 6
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger" : 77
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+      "valueString" : "InstanceValidator"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueCode" : "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"
+    }],
+    "severity" : "information",
+    "code" : "invalid",
+    "details" : {
+      "text" : "Canonical URL 'https://rnds-fhir.saude.gov.br/StructureDefinition/BRIndividuo-1.0' does not resolve"
+    },
+    "expression" : ["Patient.meta.profile[0]"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger" : 1
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger" : 4
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+      "valueString" : "InstanceValidator"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueCode" : "VALIDATION_VAL_PROFILE_UNKNOWN_ERROR"
+    }],
+    "severity" : "warning",
+    "code" : "structure",
+    "details" : {
+      "text" : "Profile reference 'https://rnds-fhir.saude.gov.br/StructureDefinition/BRIndividuo-1.0' has not been checked because it could not be found, and fetching it resulted in the error org.hl7.fhir.r4.utils.client.EFhirClientException: Error from https://rnds-fhir.saude.gov.br: RNDS\\Principal - FHIR v4.0.1 h2{--heading-prefix:\"1\"} h3,h4,h5,h6{--heading-prefix:\"1\"} Guia de Implementação da RNDS 1.0.0 - CI Build 076 FHIR * Principal * Credenciamento * Segurança * Integração * Especificação * Artefatos Exemplos * Exemplos * Resultado de Exame Laboratorial (V2) Resultado de Exame Laboratorial (V3.2.1) * Ajuda * Índice * FHIR Spec [image] * Histórico de mudanças * Downloads * Índice * Principal <prev | bottom | next> h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) \" \";} h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) \".\" counter(sub-section) \" \";} h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) \".\" counter(sub-section) \".\" counter(composite) \" \";} h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) \".\" counter(sub-section) \".\" counter(composite) \".\" counter(detail) \" \";} h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) \".\" counter(sub-section) \".\" counter(composite) \".\" counter(detail) \".\" counter(more-detail)\" \";} Guia de Implementação da RNDS - Local Development build (v1.0.0). See the Directory of published versions Principal URL oficial: https://rnds-fhir.saude.gov.br/ImplementationGuide/rnds Version: 1.0.0 IG Status do padrão: Informative Nível de maturidade do FHIR (FMM): 1 Nome computável: rnds-fhir.saude.gov.br Página de status do padrão: Informative Contents: * Introdução * Público-alvo * Roteiro Introdução Este portal detalha o uso do padrão FHIR para interoperabilidade entre Sistemas de Informação em Saúde (SISs) e a Rede Nacional de Dados em Saúde (RNDS). Público-alvo O conteúdo deste portal é dirigido a profissionais que produzem software, doravante, integradores, bem como profissionais de saúde. Os primeiros têm como foco satisfazer o \"contrato\" aqui estabelecido para que um SIS possa interagir de forma satisfatória com a RNDS. Os profissionais de saúde estão interessados em consultar detalhes semânticos que permitam compreender exatamente o conteúdo do que é trocado com a RNDS. Roteiro * ​ Credenciamento junto ao DATASUS - Saiba qual é o processo a ser seguido por um estabelecimento de saúde, e requisitos, para a integração com a RNDS. * ​ Espcificação detalhada - Define as operações e os recursos ( resources ) a serem atendidos para integração com a RNDS. * Downloads - Artefatos empregados por integradores. $(document).ready(function(){ if(window.location.hash != \"\") { $('a[href=\"' + window.location.hash + '\"]').click() } }); \u00a0 <prev top \u00a0 next> IG © 2022+ Ministério da Saúde do Brasil. Package rnds#1.0.0 based on FHIR 4.0.1. Generated 2022-12-14 Links: Índice | Relatório de Qualidade anchors.options.visible = 'hover' anchors.add()"
+    },
+    "expression" : ["Patient.meta.profile[0]"]
+  }]
+}

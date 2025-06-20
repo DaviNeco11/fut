@@ -1,27 +1,27 @@
 {
   "resourceType": "Patient",
-  "id": "eduardo-roberto",
+  "id": "fernanda-souza",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Paciente: Eduardo Roberto</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Paciente: Fernanda Souza</div>"
   },
   "identifier": [{
     "use": "official",
     "system": "http://gov.br/cpf",
-    "value": "23456789012"
+    "value": "56789012345"
   }],
   "name": [{
     "use": "official",
-    "family": "Roberto",
-    "given": ["Eduardo"]
+    "family": "Souza",
+    "given": ["Fernanda"]
   }],
-  "gender": "male",
-  "birthDate": "1985-08-22",
+  "gender": "female",
+  "birthDate": "1988-03-19",
   "maritalStatus": {
     "coding": [{
       "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-      "code": "M",
-      "display": "Married"
+      "code": "W",
+      "display": "Widowed"
     }]
   }
 }
