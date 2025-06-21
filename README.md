@@ -39,7 +39,7 @@ fhirut/
 - Java instalado
 - [validator_cli.jar](https://github.com/hapifhir/org.hl7.fhir.core/releases) (precisa ser baixado manualmente)
 - YAML instalado (pip install yaml)
-- STREAMLIT instalado (pip instal streamlit)
+- STREAMLIT instalado (pip install streamlit)
   
 ---
 
