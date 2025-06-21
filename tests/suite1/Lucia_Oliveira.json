@@ -1,0 +1,27 @@
+{
+  "resourceType": "Patient",
+  "id": "lucia-oliveira",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Paciente: Lucia Oliveira</div>"
+  },
+  "identifier": [{
+    "use": "official",
+    "system": "http://gov.br/cpf",
+    "value": "30456789012"
+  }],
+  "name": [{
+    "use": "official",
+    "family": "Oliveira",
+    "given": ["Lucia"]
+  }],
+  "gender": "female",
+  "birthDate": "1990-01-10",
+  "maritalStatus": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code": "M",
+      "display": "Married"
+    }]
+  }
+}

@@ -39,7 +39,7 @@ fhirut/
 - Java instalado
 - [validator_cli.jar](https://github.com/hapifhir/org.hl7.fhir.core/releases) (precisa ser baixado manualmente)
 - YAML instalado (pip install yaml)
-- STREAMLIT instalado (pip instal streamlit)
+- STREAMLIT instalado (pip install streamlit)
   
 ---
 
@@ -110,6 +110,6 @@ Faça o download manual e coloque na raiz do projeto.
 - [@DaviNeco11](https://github.com/DaviNeco11)
 - [@MathPaccheco](https://github.com/MathPaccheco)
 - [@carineaquino](https://github.carineaquino)
-- [@mamedon](https://github.com/mamendon)
+- [@mamendon](https://github.com/mamendon)
 - [@luizPiresC](https://github.com/luizPiresC)
 - Equipe de desenvolvimento do projeto `fut`
