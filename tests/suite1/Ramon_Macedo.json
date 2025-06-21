@@ -1,0 +1,27 @@
+{
+  "resourceType": "Patient",
+  "id": "ramon-macedo",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Paciente: Ramon Macedo</div>"
+  },
+  "identifier": [{
+    "use": "official",
+    "system": "http://gov.br/cpf",
+    "value": "23456789012"
+  }],
+  "name": [{
+    "use": "official",
+    "family": "Macedo",
+    "given": ["Ramon"]
+  }],
+  "gender": "male",
+  "birthDate": "1995-06-20",
+  "maritalStatus": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code": "U",
+      "display": "Unmarried"
+    }]
+  }
+}

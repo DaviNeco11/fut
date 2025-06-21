@@ -1,0 +1,27 @@
+{
+  "resourceType": "Patient",
+  "id": "joao-silva",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Paciente: João Silva</div>"
+  },
+  "identifier": [{
+    "use": "official",
+    "system": "http://gov.br/cpf",
+    "value": "45678901234"
+  }],
+  "name": [{
+    "use": "official",
+    "family": "Silva",
+    "given": ["João"]
+  }],
+  "gender": "male",
+  "birthDate": "2000-12-01",
+  "maritalStatus": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code": "U",
+      "display": "Unmarried"
+    }]
+  }
+}
