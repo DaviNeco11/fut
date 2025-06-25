@@ -23,3 +23,23 @@ casos:
     entrada: "tests/suite1/Fernanda_Souza.json"
     esperado: "tests/suite1/Fernanda_Souza_esperado.json"
     esperaErros: false
+
+  - nome: Lucas_Mendes
+    entrada: "tests/suite1/Lucas_Mendes.json"
+    esperado: "tests/suite1/Lucas_Mendes_esperado.json"
+    esperaErros: false
+
+  - nome: Lucia_Oliveira
+    entrada: "tests/suite1/Lucia_Oliveira.json"    
+    esperado: "tests/suite1/Lucia_Oliveira_esperado.json"
+    esperaErros: false
+
+  - nome: Ramon_Macedo
+    entrada: "tests/suite1/Ramon_Macedo.json"    
+    esperado: "tests/suite1/Ramon_Macedo_esperado.json"
+    esperaErros: true
+
+  - nome: Carlos_Andrade
+    entrada: "tests/suite1/Carlos_Andrade.json"    
+    esperado: "tests/suite1/Carlos_Andrade_esperado.json"
+    esperaErros: true
